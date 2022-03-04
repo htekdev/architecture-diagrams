@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-04T22:12:50.994Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56" etag="-ant08GQKQbtfITl1OGq" version="16.6.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-04T22:15:27.687Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56" etag="o42mUAkXxIvoJiIpX5Me" version="16.6.4" type="github">
   <diagram id="iof7RJ9Ut9rO8wIrEpUl" name="Page-1">
     <mxGraphModel dx="4382" dy="2783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -132,7 +132,7 @@
           <mxGeometry x="260" y="868.25" width="50" height="22.5" as="geometry" />
         </mxCell>
         <mxCell id="EE53fWStPAIUiXsXn1bc-54" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://miro.medium.com/max/1400/1*wa3Wknzgr6nS8ZrQQf2N6g.png;" vertex="1" parent="1">
-          <mxGeometry x="-950" y="740" width="520" height="320" as="geometry" />
+          <mxGeometry x="-890" y="700" width="520" height="320" as="geometry" />
         </mxCell>
         <mxCell id="EE53fWStPAIUiXsXn1bc-55" value="&lt;font color=&quot;#292929&quot; face=&quot;menlo, monaco, courier new, courier, monospace&quot;&gt;&lt;span style=&quot;font-size: 16px ; letter-spacing: -0.352px&quot;&gt;Dirived Node Address&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 16px ; font-weight: 400 ; letter-spacing: -0.352px&quot;&gt;m/44&#39;/60&#39;/0&#39;/0/0&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="180" y="1000" width="210" height="55" as="geometry" />
@@ -201,7 +201,7 @@
           <mxGeometry x="-190" y="930" width="100" height="180" as="geometry" />
         </mxCell>
         <mxCell id="EE53fWStPAIUiXsXn1bc-89" value="&lt;span style=&quot;color: rgb(0 , 102 , 102) ; font-family: &amp;#34;verdana&amp;#34; ; font-size: 30px ; font-style: normal ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;Derivation Paths for P2PKH&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=15;fontFamily=Verdana;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="-500" y="1050" width="480" height="40" as="geometry" />
+          <mxGeometry x="-480" y="1050" width="480" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
