@@ -7,8 +7,10 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
+    paths: '!.artifacts/**'
   pull_request:
     branches: [ main ]
+    paths: '!.artifacts/**'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,7 +35,7 @@ jobs:
             
             $_ = New-Item -ItemType Directory -Path "${{ github.workspace }}/.aritacts" -Force
             
-            $currentLocation = $($env:GITHUB_WORKSPACE)
+            $currentLocation = "${{ github.workspace }}"
             $files = Get-ChildItem -Path "${{ github.workspace }}" -Include "*.drawio" -Recurse
             foreach($file in $files){
 
@@ -60,4 +62,10 @@ jobs:
           # A file, directory or wildcard pattern that describes what to upload
           path: ${{ github.workspace }}/.aritacts
           # The desired behavior if no files are found using the provided path.
+          
+      # ...and then use the action as you would normally do, but providing the path to the repo
+      - uses: EndBug/add-and-commit@v8
+        with:
+          message: 'Exporting from sha ${{ github.sha }}'
+          add: '${{ github.workspace }}/.artifacts/** --force'
        
