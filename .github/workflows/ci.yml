@@ -39,7 +39,7 @@ jobs:
           inlineScript: |
             npm install --global draw.io-export
             
-            $_ = New-Item -ItemType Directory -Path "${{ github.workspace }}/.aritacts" -Force
+            $_ = New-Item -ItemType Directory -Path "${{ github.workspace }}/.artifacts" -Force
             
             $currentLocation = "${{ github.workspace }}"
             $files = Get-ChildItem -Path "${{ github.workspace }}" -Include "*.drawio" -Recurse
@@ -47,7 +47,7 @@ jobs:
 
               Write-Host "Exporting $($file.FullName)"
 
-              $newFileName = $($file.FullName) -replace "$($currentLocation)","${{ github.workspace }}/.aritacts"
+              $newFileName = $($file.FullName) -replace "$($currentLocation)","${{ github.workspace }}/.artifacts"
               $newFileName = [System.IO.Path]::ChangeExtension($newFileName, "png")
               
               drawio $($file.FullName) -o $newFileName
@@ -66,7 +66,7 @@ jobs:
           # Artifact name
           name: artifacts # optional, default is artifact
           # A file, directory or wildcard pattern that describes what to upload
-          path: ${{ github.workspace }}/.aritacts
+          path: ${{ github.workspace }}/.artifacts
           # The desired behavior if no files are found using the provided path.
           
       # ...and then use the action as you would normally do, but providing the path to the repo
