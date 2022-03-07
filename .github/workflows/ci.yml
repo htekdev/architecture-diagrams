@@ -31,15 +31,15 @@ jobs:
           inlineScript: |
             npm install --global draw.io-export
             
-            $_ = New-Item -ItemType Directory -Path "$($env:RUNNER_TEMP)\aritacts" -Force
+            $_ = New-Item -ItemType Directory -Path "${{ github.workspace }}/.aritacts" -Force
             
             $currentLocation = $($env:GITHUB_WORKSPACE)
-            $files = Get-ChildItem -Path "$($env:GITHUB_WORKSPACE)" -Include "*.drawio" -Recurse
+            $files = Get-ChildItem -Path "${{ github.workspace }}" -Include "*.drawio" -Recurse
             foreach($file in $files){
 
-              Write-Host "Exporting $($_.file.FullName)"
+              Write-Host "Exporting $($file.FullName)"
 
-              $newFileName = $($file.FullName) -replace "$($currentLocation)","$($env:RUNNER_TEMP)\aritacts"
+              $newFileName = $($file.FullName) -replace "$($currentLocation)","${{ github.workspace }}/.aritacts"
               $newFileName = [System.IO.Path]::ChangeExtension($newFileName, "png")
               
               drawio $($file.FullName) -o $newFileName
@@ -58,6 +58,6 @@ jobs:
           # Artifact name
           name: artifacts # optional, default is artifact
           # A file, directory or wildcard pattern that describes what to upload
-          path: $(RUNNER_TEMP)\aritacts
+          path: ${{ github.workspace }}/.aritacts
           # The desired behavior if no files are found using the provided path.
        
