@@ -73,5 +73,5 @@ jobs:
       - uses: EndBug/add-and-commit@v8
         with:
           message: 'Exporting from sha ${{ github.sha }}'
-          add: '${{ github.workspace }}/.artifacts/** --force'
+          add: '.artifacts/** --force'
        
